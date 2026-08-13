@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-mib-cream text-mib-choco antialiased;
+    font-family: "Fredoka", "Segoe UI", sans-serif;
+  }
+
+  a {
+    @apply transition-all duration-300;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: "TAN Songbird", "Playfair Display", Georgia, serif;
+    letter-spacing: -0.03em;
+  }
+
+  ::selection {
+    @apply bg-mib-pink/25 text-mib-brand;
+  }
+}
+
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+    filter: blur(2px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
+  }
+}
