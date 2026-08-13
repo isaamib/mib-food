@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import { CupcakeIcon, InstagramIcon, WhatsappIcon, PinIcon } from "./Decor";
+import { InstagramIcon, WhatsappIcon, PinIcon } from "./Decor";
 
 const LINKS_RAPIDOS = [
   { href: "#vitrine", label: "Nossos Doces" },
@@ -8,18 +8,22 @@ const LINKS_RAPIDOS = [
   { href: "#pedido", label: "Encomendar" },
 ];
 
-const WHATSAPP = "5511999999999";
+const WHATSAPP = "5513996432819";
+const INSTAGRAM = "mibfood";
 
 export default function Footer() {
   return (
-    <footer id="pedido" className="relative overflow-hidden bg-mib-cream pt-24">
+    <footer id="pedido" className="relative overflow-hidden bg-[#fff6ec] pt-24">
       <div className="mx-auto max-w-6xl px-5">
         <div className="grid gap-12 rounded-[2.5rem] border border-mib-choco/10 bg-mib-light/40 p-7 shadow-sweet sm:p-9 lg:grid-cols-[1.3fr_0.8fr_0.9fr]">
           <Reveal>
             <div>
               <div className="flex items-center gap-3">
-                <CupcakeIcon className="h-10 w-10" />
-                <span className="text-3xl font-bold tracking-tight text-mib-brand">mib food</span>
+                <img 
+                  src="/images/logo.png" 
+                  alt="mib food logo" 
+                  className="h-16 w-auto"
+                />
               </div>
               <p className="mt-5 max-w-md text-lg leading-relaxed text-mib-choco/80">
                 Doces artesanais com identidade própria, sabor acolhedor e um toque de carinho em cada detalhe.
@@ -59,13 +63,33 @@ export default function Footer() {
                   <PinIcon className="mt-0.5 h-5 w-5 shrink-0 text-mib-brand" />
                   Retirada e entrega sob agendamento.
                 </li>
-                <li>Instagram: @mibfood</li>
-                <li>WhatsApp: (11) 99999-9999</li>
+                <li>
+                  Instagram:{" "}
+                  <a 
+                    href={`https://instagram.com/${INSTAGRAM}`} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="hover:text-mib-brand"
+                  >
+                    @{INSTAGRAM}
+                  </a>
+                </li>
+                <li>
+                  WhatsApp:{" "}
+                  <a 
+                    href={`https://wa.me/${WHATSAPP}`} 
+                    target="_blank" 
+                    rel="noreferrer"
+                    className="hover:text-mib-brand"
+                  >
+                    +55 (13) 9 9643-2819
+                  </a>
+                </li>
                 <li>CNPJ: 00.000.000/0001-00</li>
               </ul>
 
               <div className="mt-6 flex gap-3">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-11 w-11 place-items-center rounded-2xl bg-mib-brand text-mib-cream hover:bg-mib-pink">
+                <a href={`https://instagram.com/${INSTAGRAM}`} target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-11 w-11 place-items-center rounded-2xl bg-mib-brand text-mib-cream hover:bg-mib-pink">
                   <InstagramIcon className="h-5 w-5" />
                 </a>
                 <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="grid h-11 w-11 place-items-center rounded-2xl bg-mib-brand text-mib-cream hover:bg-mib-pink">

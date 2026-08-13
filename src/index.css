@@ -24,10 +24,12 @@
   .font-display {
     font-family: "TAN Songbird", "Playfair Display", Georgia, serif;
     letter-spacing: -0.03em;
+    text-wrap: balance;
   }
 
   ::selection {
-    @apply bg-mib-pink/25 text-mib-brand;
+    background: rgba(165, 3, 33, 0.12);
+    color: inherit;
   }
 }
 

@@ -1,5 +1,6 @@
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
+import Manifesto from "./components/Manifesto";
 import Essencia from "./components/Essencia";
 import Vitrine from "./components/Vitrine";
 import Depoimentos from "./components/Depoimentos";
@@ -12,6 +13,7 @@ export default function App() {
       <NavBar />
       <main>
         <Hero />
+        <Manifesto />
         <Essencia />
         <Vitrine />
         <Depoimentos />

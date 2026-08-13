@@ -2,12 +2,12 @@ import Reveal from "./Reveal";
 import { StrawberryIcon, BrigadeiroIcon } from "./Decor";
 
 const VALORES = [
-  { titulo: "Paixão", texto: "Cada receita nasce do cuidado de quem ama fazer doces que transformam momentos em memórias." },
-  { titulo: "Chocolate", texto: "Sabor intenso, textura macia e ingredientes premium para uma experiência verdadeiramente irresistível." },
-  { titulo: "Acolhimento", texto: "Você é ouvido, orientado e encantado desde a ideia até o momento em que o doce chega à mesa." },
+  { titulo: "Paixão", emoji: "❤️", texto: "Tudo começa com uma receita, mas termina em memória. Cada doce nasce do cuidado e da paixão por transformar momentos simples em experiências especiais." },
+  { titulo: "Chocolate", emoji: "🍫", texto: "Intenso, cremoso e irresistível. Chocolate de verdade, textura que conquista e aquele sabor que faz você querer só mais um." },
+  { titulo: "Acolhimento", emoji: "🤗", texto: "Aqui, sua ideia ganha espaço. A gente escuta, entende, orienta e cuida de cada detalhe para que o resultado tenha a sua cara." },
 ];
 
-const IMG = "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=900&q=80";
+const IMG = "/images/essencia.jpeg";
 
 export default function Essencia() {
   return (
@@ -23,7 +23,10 @@ export default function Essencia() {
             src={IMG}
             alt="Bia Menezes trabalhando em uma mesa recheada de doces artesanais"
             loading="lazy"
-            className="relative aspect-[5/4] w-full rounded-[3rem] object-cover shadow-sweet"
+            onError={(event) => {
+              event.currentTarget.src = "/images/essencia.png";
+            }}
+            className="relative w-full rounded-[3rem] object-contain shadow-sweet"
           />
         </Reveal>
 
@@ -37,14 +40,13 @@ export default function Essencia() {
 
           <Reveal delay={100}>
             <h2 className="mt-4 font-display text-4xl leading-tight text-mib-brand sm:text-5xl">
-              Bia Menezes: o coração da mib food
+              Bia Menezes: o coração por trás da MIB Food
             </h2>
           </Reveal>
 
           <Reveal delay={200}>
             <p className="mt-5 text-lg leading-relaxed text-mib-choco/85">
-              Divertida, acolhedora e tradicional. É assim que transformamos ingredientes em momentos. Cada doce é pensado
-              com carinho para tornar sua ocasião especial inesquecível.
+              Divertida, acolhedora e apaixonada por doces. É assim que transformamos ingredientes em pequenos momentos de felicidade.
             </p>
           </Reveal>
 
@@ -52,8 +54,8 @@ export default function Essencia() {
             {VALORES.map((v, i) => (
               <Reveal key={v.titulo} delay={280 + i * 120}>
                 <div className="group flex items-start gap-4 rounded-blob bg-mib-cream p-5 shadow-sweet transition-all duration-300 hover:-translate-y-1">
-                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-mib-light text-sm font-bold text-mib-brand transition-transform duration-300 group-hover:scale-110">
-                    {v.titulo.slice(0, 2).toUpperCase()}
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-mib-light text-2xl transition-transform duration-300 group-hover:scale-110">
+                    {v.emoji}
                   </span>
                   <div>
                     <h3 className="text-lg font-bold text-mib-brand">{v.titulo}</h3>

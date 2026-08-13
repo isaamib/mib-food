@@ -3,21 +3,21 @@ import { Sprinkles } from "./Decor";
 
 const DOCES = [
   {
-    nome: "Chocolate Decadente",
-    desc: "O clássico que derrete. Nossos chocolates são premium e a textura é impecável.",
-    img: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=900&q=80",
+    nome: "Chocolatudo Tradicional",
+    desc: "O clássico que nunca sai de moda. Muito chocolate, cremosidade na medida e aquele sabor que faz qualquer ocasião ficar melhor.",
+    img: "/images/vitrine-1.png",
     bg: "from-[#7c4117] via-[#7c4117]/90 to-[#4d2b19]",
   },
   {
-    nome: "Red Velvet da Bia",
-    desc: "Paixão em cada camada, com massa macia e cobertura que abraça até a última mordida.",
-    img: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=900&q=80",
+    nome: "Mais que só docinho",
+    desc: "São pequenos detalhes capazes de transformar uma comemoração em lembrança. Cada um é feito para ser saboreado, compartilhado e lembrado.",
+    img: "/images/vitrine-2.png",
     bg: "from-[#a50321] via-[#c52d3c] to-[#ff889e]",
   },
   {
     nome: "Mimos Gourmet",
-    desc: "Brigadeiros, macarons e doces pensados para surpreender em qualquer celebração.",
-    img: "https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=900&q=80",
+    desc: "Brigadeiros, barras e doces feitos para presentear, celebrar e surpreender. Porque alguns momentos merecem um mimo à altura.",
+    img: "/images/vitrine-3.png",
     bg: "from-[#ff889e] via-[#f7b0bf] to-[#fff5ec]",
   },
 ];
